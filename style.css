@@ -128,7 +128,7 @@ body {
   width: auto;
   height: auto;
   filter: drop-shadow(0 30px 40px rgba(0,0,0,0.25));
-  animation: float 4s ease-in-out infinite;
+  animation: float 12s ease-in-out infinite;
   display: none;
 }
 

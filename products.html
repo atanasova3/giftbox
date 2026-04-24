@@ -15,7 +15,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="products.html">Products</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contacts.html">Contact</a></li>
     </ul>
     <div class="nav-right">
       <a href="#" class="order-btn">ORDER NOW</a>
@@ -25,12 +25,12 @@
   <section class="products-grid">
     <div class="product-card">
       <div class="product-image">
-        <img src="0.png" alt="Matcha">
+        <img src="0.png" alt="CLASSIC">
       </div>
       <div class="product-info">
         <h3>Classic</h3>
-        <p class="price">$4.50</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">25.50</p>
+        <button class="add-to-cart">MORE</button>
       </div>
     </div>
     <div class="product-card">
@@ -39,8 +39,8 @@
       </div>
       <div class="product-info">
         <h3>Christmas</h3>
-        <p class="price">$5.00</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">25.50</p>
+        <button class="add-to-cart">MORE</button>
       </div>
     </div>
     <div class="product-card">
@@ -49,31 +49,45 @@
       </div>
       <div class="product-info">
         <h3>Valentine</h3>
-        <p class="price">$5.00</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">25.50</p>
+        <button class="add-to-cart">MORE</button>
       </div>
     </div>
     <div class="product-card">
       <div class="product-image">
-        <img src="3.png" alt="Choco">
+        <img src="3.png" alt="KIDS">
       </div>
       <div class="product-info">
-        <h3>Choco</h3>
-        <p class="price">$4.50</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <h3>KIDS</h3>
+        <p class="price">25.50</p>
+        <button class="add-to-cart">MORE</button>
       </div>
     </div>
     <div class="product-card">
       <div class="product-image">
-        <img src="4.png" alt="Vanilla">
+        <img src="4.png" alt="EASTER">
       </div>
       <div class="product-info">
-        <h3>Vanilla</h3>
-        <p class="price">$4.50</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <h3>EASTER</h3>
+        <p class="price">25.50</p>
+        <button class="add-to-cart">MORE</button>
       </div>
     </div>
   </section>
+
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div class="modal-body">
+        <img id="modal-img" src="" alt="Product Image">
+        <div class="modal-text">
+          <h3 id="modal-title"></h3>
+          <p id="modal-description"></p>
+          <button class="add-to-cart modal-add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="products.js"></script>
 </body>

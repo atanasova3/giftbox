@@ -1,7 +1,4 @@
-/**
- * 1. SLIDE DATA
- * Each object defines the name, background color, and image filename for a slide.
- */
+
 const slides = [
   { name: "CLASSIC", color: "#a588c8 ", img: "0.png" },
   { name: "CHRISTMAS", color: "#AB2330", img: "1.png" },
@@ -12,10 +9,6 @@ const slides = [
 
 let currentIndex = 0;
 
-/**
- * 2. INITIALIZATION
- * Creates image elements for all containers once.
- */
 function init() {
   const containers = ['left-container', 'center-container', 'right-container'];
   
@@ -34,30 +27,21 @@ function init() {
   updateCarousel();
 }
 
-/**
- * 3. UPDATE CAROUSEL
- * Changes active images, background color, and background text.
- */
 function updateCarousel() {
   const total = slides.length;
   
-  // Calculate neighbors for the side previews
   const leftIdx = (currentIndex - 1 + total) % total;
   const rightIdx = (currentIndex + 1) % total;
 
-  // A. Update Background Color and Large Text
   document.body.style.backgroundColor = slides[currentIndex].color;
   const bgText = document.getElementById('bg-text');
   bgText.textContent = slides[currentIndex].name;
 
-  // B. Toggle "active" class on images
   document.querySelectorAll('.carousel-container').forEach(container => {
     const imgs = container.querySelectorAll('.box-image');
     
-    // Hide all first
     imgs.forEach(img => img.classList.remove('active'));
     
-    // Show specific image based on container role
     if(container.id === 'left-container') {
       imgs[leftIdx].classList.add('active');
     } else if(container.id === 'center-container') {
