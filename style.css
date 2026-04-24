@@ -82,18 +82,20 @@ body {
 /* ===== HERO & DYNAMIC TEXT ===== */
 .hero {
   position: relative;
-  flex: 0 1 auto;
-  min-height: 70vh;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 40px;
+  padding: 80px 20px 20px;
   width: 100%;
   margin-top: 0;
 }
 
 .hero-bg-text {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   z-index: 1;
@@ -276,6 +278,7 @@ body {
   top: 60px;
   left: 0;
   width: 100%;
+  z-index: 99;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   flex-direction: column;
@@ -316,7 +319,7 @@ body {
 @media (max-width: 1024px) {
   body { padding-bottom: 130px; }
   .navbar { padding: 15px 30px; }
-  .hero { min-height: 60vh; padding: 100px 20px 40px; }
+  .hero { padding: 80px 20px 20px; }
   .bg-word { font-size: 25vw; }
   
   .product-left .box-image, .product-right .box-image { height: 160px; }
@@ -339,7 +342,7 @@ body {
   .hamburger-menu { display: flex; }
   .mobile-nav.active { display: flex; }
 
-  .hero { min-height: 55vh; padding: 90px 15px 30px; }
+  .hero { padding: 75px 15px 20px; }
   .bg-word { font-size: 20vw; }
   
   .products-stage { gap: 15px; }
@@ -394,7 +397,7 @@ body {
   .cart-icon img { width: 24px; height: 24px; }
   .mobile-nav { top: 64px; }
 
-  .hero { padding: 80px 10px 20px; }
+  .hero { padding: 65px 10px 10px; }
   .bg-word { font-size: 24vw; }
   
   .products-stage { gap: 10px; }
