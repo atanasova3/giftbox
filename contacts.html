@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee & Co. — Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-circle">C</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <img src="cart.svg" alt="Cart">
+        <span class="cart-quantity">0</span>
+      </a>
+      <a href="cart.html" class="order-btn">ORDER NOW</a>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Have a question or a special request? We'd love to hear from you. Reach out via phone, email, or the contact form.</p>
+        <div class="info-item">
+          <strong>Email:</strong>
+          <p>contact@giftbox.com</p>
+        </div>
+        <div class="info-item">
+          <strong>Phone:</strong>
+          <p>+1 (234) 567-890</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="contacts.js"></script>
+</body>
+</html>

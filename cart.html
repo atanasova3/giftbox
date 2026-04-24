@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee & Co. — Your Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-circle">C</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <img src="cart.svg" alt="Cart">
+        <span class="cart-quantity">0</span>
+      </a>
+      <a href="#" class="order-btn">ORDER NOW</a>
+    </div>
+  </nav>
+
+  <section class="cart-section">
+    <h1>Your Cart</h1>
+    <div id="cart-items-container">
+      <!-- Cart items will be injected here by cart.js -->
+    </div>
+    <div class="cart-summary">
+      <p>Total: <span id="cart-total">$0.00</span></p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </section>
+
+  <script src="cart.js"></script>
+</body>
+</html>
