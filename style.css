@@ -1,0 +1,216 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-green: #3d6b2c;
+  --dark: #1a1a0e;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #b5c463; /* Default Matcha Color */
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden; /* Prevents scrolling during animations */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.logo-circle {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: var(--accent-green);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: opacity 0.3s;
+}
+
+.order-btn {
+  text-decoration: none;
+  background: var(--white);
+  color: var(--dark);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+
+/* ===== HERO & DYNAMIC TEXT ===== */
+.hero {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.hero-bg-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-word {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30vw;
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 0.8;
+  transition: all 0.6s ease-in-out;
+  display: block;
+  user-select: none;
+}
+
+/* ===== PRODUCTS STAGE ===== */
+.products-stage {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-image {
+  width: auto;
+  height: auto;
+  filter: drop-shadow(0 30px 40px rgba(0,0,0,0.25));
+  animation: float 4s ease-in-out infinite;
+  display: none;
+}
+
+.box-image.active {
+  display: block;
+}
+
+/* Side Previews */
+.product-left .box-image, .product-right .box-image {
+  height: 220px;
+  max-width: none;
+  opacity: 0.5;
+}
+
+/* Main Center Cup */
+.product-center .box-image {
+  height: 450px;
+  max-width: none;
+  z-index: 20;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ===== BOTTOM BAR ===== */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #F4EEE1;
+  padding: 25px 50px;
+  border-radius: 50px 50px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 110;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
+
+.bottom-left { width: 25%; }
+
+.bottom-desc {
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+.bottom-center {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: var(--accent-green);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover { background: var(--dark); }
+
+.order-now-main {
+  background: var(--dark);
+  padding: 14px 40px;
+}
+
+.bottom-right {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Bebas Neue'; font-size: 28px; display: block; color: var(--dark); }
+.stat-label { font-size: 9px; text-transform: uppercase; color: #999; font-weight: 700; }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee & Co. — Premium Brews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-circle">C</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#" class="order-btn">ORDER NOW</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg-text">
+      <span class="bg-word" id="bg-text">GIFT BOX</span>
+    </div>
+
+    <div class="products-stage">
+      <div class="carousel-container product-left" id="left-container"></div>
+      <div class="carousel-container product-center" id="center-container"></div>
+      <div class="carousel-container product-right" id="right-container"></div>
+    </div>
+  </section>
+
+  <div class="bottom-bar"> 
+    <div class="bottom-left">
+      <p class="bottom-desc">Explore a realm of rich lucurious gift boxes with our exclusive product selection.</p>
+    </div>
+    
+    <div class="bottom-center">
+      <button class="nav-btn" onclick="prevSlide()">Prev</button>
+      <button class="nav-btn order-now-main">Order Now</button>
+      <button class="nav-btn" onclick="nextSlide()">Next</button>
+    </div>
+
+    <div class="bottom-right">
+      <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Boxes</span></div>
+      <div class="stat-item"><span class="stat-num">20K+</span><span class="stat-label">Served</span></div>
+      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Premium</span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
